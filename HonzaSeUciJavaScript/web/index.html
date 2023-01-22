@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="../tools/index.css">
+        </head>
+        <script src="../tools/index.js"></script>
+        <body>
+            <div class="content">
+                <div class="button" id="btn">
+                    <button id="but"          ></button>
+                 </div>  
+            </div>
+            <div id="demo">
+                    <!--Po kliknutí na tlačítko se změní "barva" -->
+            </div>
+            <div>
+               <!-- <a href="#"  
+                    onclick="window.open('okno/index.html', 
+                         'výběr_barvy', 
+                         'width=600,height=500'); 
+                return false;"
+                >Print</a>
+            onclick="window.open('okno/index.html', 
+                    'výběr_barvy', 
+                    'width=600,height=500'); "
+            -->
+            </div>
+            <div class = "color_buttons" id="barvy" style="display:none">
+                <div class ="red">
+                    <button id="red" onclick=""></button>
+                </div>
+                <div class ="green">
+                    <button id="green" onclick=""></button>
+                </div>
+                <div class ="blue">
+                    <button id="blue" onclick=""></button>
+                </div>
+            </div>
+            <script>
+                var b = document.getElementById("but");
+                var colors = document.getElementById("barvy");
+
+                let cervena = document.getElementById("red");
+                let zelena = document.getElementById("green");
+                let modra = document.getElementById("blue");
+
+                var klyk = function(e) {
+                    console.log("funguje");
+                    colors.style.display = "flex";
+                    
+                }
+
+                /*function klyk(e) {
+                    console.log("funguje");
+                    colors.style.display = "block";
+
+                }*/
+                let rklyk = function(e){
+                    console.log("red funguje");
+                    colors.style.display = "none";
+                    /*document.getElementById("but").innerHTML = "red";*/
+                    document.getElementById("but").style.background='red';
+
+                }
+                let gklyk = function(e){
+                    console.log("red funguje");
+                    colors.style.display = "none";
+                    /*document.getElementById("but").innerHTML = "red";*/
+                    document.getElementById("but").style.background='green';
+
+                }
+                let bklyk = function(e){
+                    console.log("red funguje");
+                    colors.style.display = "none";
+                    /*document.getElementById("but").innerHTML = "red";*/
+                    document.getElementById("but").style.background='blue';
+
+                }
+                
+                b.addEventListener("click", klyk )
+                cervena.addEventListener("click", rklyk);
+                zelena.addEventListener("click", gklyk);
+                modra.addEventListener("click", bklyk);
+            </script>
+        </body>
+    </html>
